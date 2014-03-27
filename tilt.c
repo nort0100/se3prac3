@@ -7,7 +7,8 @@ int tilt_line_left(int length,int *line)
   if (length<1||length>255) return -1;
 
   // slide tiles to the left
-  int list[4] startVector;
+  int i1,i2,i3,i4;
+  int list[4] startVector = {i1,i2,i3,i4};
   int i = 0;
   for (i < 4)
   {
