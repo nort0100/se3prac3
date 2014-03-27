@@ -7,17 +7,17 @@ int tilt_line_left(int length,int *line)
   if (length<1||length>255) return -1;
 
   // slide tiles to the left
-  int i1,i2,i3,i4;
+  int i1,i2,i3,i4;//integer variables
   int list[4] startVector = {i1,i2,i3,i4};
   int i = 0;
-  for (i < 4)
+  for (i < 4)//moving values, only 1 at a time currently, need to change to move if value exists move to furthest left pos available
   {
       if (i = 3)
       {
-          list[i] = 0;
+          startVector[i] = 0;
           return;
       }
-   list[i] = list[i+1]; 
+   startVector[i] = startVector[i+1]; 
    i++;
   }
 
