@@ -189,31 +189,31 @@ int tilt_line_right(int length,int *line)
       }
   }
   //testing 3 and 1
-  if(i1 == null && i3 == null){
-      if(i2 == i4){
-          i2 = i2*i4;
-          i1 = i2;
+  if(i4 == null && i2 == null){
+      if(i3 == i1){
+          i3 = i3*i1;
+          i4 = i3;
+          i1 = null;
           i2 = null;
           i3 = null;
-          i4 = null;
       }
   }
   
   //testing middle 2 positions, reversed from left
-  if(i2 == i3){
-      i2 = i2*i3;
-      if(i4 != null){
-          i3 = i4;
-          i4 = null;
+  if(i3 == i2){
+      i3 = i3*i2;
+      if(i1 != null){
+          i2 = i1;
+          i1 = null;
       }
       else{
-          i3 = null;
+          i2 = null;
       }
   }
   //testing final 2 positions, i1 and i2
-  if(i3 == i4){
-      i3 = i3*i4;
-      i4 = null;
+  if(i2 == i1){
+      i2 = i2*i1;
+      i1 = null;
   }
   
   //move all values as far right as possible, for only any values present, otherwise covered in combinations
