@@ -50,6 +50,14 @@ int test_tilt_right(){
         int e=0;
         e|=ttl_vector(0,0,0,0,"Empty list is empty after shift",0,0,0,0);
         e|=ttl_vector(0,0,0,1,"Value on left stays on right after shift",0,0,0,1);
+        e|=ttl_vector(0,0,0,1,"Value on right shifts stays right after shift",0,0,0,1);
+        e|=ttl_vector(0,0,1,0,"Value in middle shifts to right edge after shift",0,0,0,1);
+        e|=ttl_vector(1,2,4,8,"Distinct values don't combine",1,2,4,8);
+        e|=ttl_vector(1,1,1,1,"Combinations don't cascade",0,0,2,2);
+        e|=ttl_vector(0,0,1,1,"Values on right combine",0,0,0,2);
+        e|=ttl_vector(4,0,1,1,"Values combine correctly, move to right",0,0,4,2);
+        e|=ttl_vector(2,0,1,1,"Values combine correctly, move to right",0,0,2,2);
+        return e;
 }
 int main(int argc,char **argv)
 {
