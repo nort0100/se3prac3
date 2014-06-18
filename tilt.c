@@ -42,8 +42,24 @@ int tilt_line_left(int length,int *line)
       }
   }
    //testing 1 and 4
-  
+  if(i2 == null && i3 == null){
+      if(i1 == i4){
+          i1 = i1*i4;
+          i2 = null;
+          i3 = null;
+          i4 = null;
+      }
+  }
   //testing 2 and 4
+  if(i1 == null && i3 == null){
+      if(i2 == i4){
+          i2 = i2*i4;
+          i1 = i2;
+          i2 = null;
+          i3 = null;
+          i4 = null;
+      }
+  }
   
   //testing middle 2 positions
   if(i2 == i3){
@@ -62,7 +78,8 @@ int tilt_line_left(int length,int *line)
       i4 = null;
   }
   
-  //move all values as far left as possible
+  //move all values as far left as possible, for only 1 value present, otherwise covered in combinations
+  //Give each value a line number so it can be returned
   
   
   return 0;
