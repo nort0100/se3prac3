@@ -46,10 +46,11 @@ int test_tilt_left()
   return e;
 }
 
-int test_tilt_right()
-int e=0;
-
-
+int test_tilt_right(){
+        int e=0;
+        e|=ttl_vector(0,0,0,0,"Empty list is empty after shift",0,0,0,0);
+        e|=ttl_vector(0,0,0,1,"Value on left stays on right after shift",0,0,0,1);
+}
 int main(int argc,char **argv)
 {
   int e=0;
