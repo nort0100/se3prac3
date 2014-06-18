@@ -170,7 +170,7 @@ int tilt_line_right(int length,int *line)
           i1 = null;
       }
   }
-    //testing 1 and 3
+    //testing 4 and 2
   if(i2 == null){//check if null, otherwise nothing
       if(i1 == i3){
           i1 = i1*i3;
@@ -179,7 +179,7 @@ int tilt_line_right(int length,int *line)
           }
       }
   }
-   //testing 1 and 4
+   //testing 4 and 1
   if(i2 == null && i3 == null){
       if(i1 == i4){
           i1 = i1*i4;
@@ -188,7 +188,7 @@ int tilt_line_right(int length,int *line)
           i4 = null;
       }
   }
-  //testing 2 and 4
+  //testing 3 and 1
   if(i1 == null && i3 == null){
       if(i2 == i4){
           i2 = i2*i4;
@@ -199,7 +199,7 @@ int tilt_line_right(int length,int *line)
       }
   }
   
-  //testing middle 2 positions
+  //testing middle 2 positions, reversed from left
   if(i2 == i3){
       i2 = i2*i3;
       if(i4 != null){
@@ -210,13 +210,13 @@ int tilt_line_right(int length,int *line)
           i3 = null;
       }
   }
-  //testing final 2 positions
+  //testing final 2 positions, i1 and i2
   if(i3 == i4){
       i3 = i3*i4;
       i4 = null;
   }
   
-  //move all values as far left as possible, for only any values present, otherwise covered in combinations
+  //move all values as far right as possible, for only any values present, otherwise covered in combinations
   //checking first position-other values taken care of in combinations above or below
   //possibly some redundant code, trying to avoid by using this process, my bad
   if(i1 != null){
