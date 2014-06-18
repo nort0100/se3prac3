@@ -12,10 +12,18 @@ int tilt_line_left(int length,int *line)
 
   int i1,i2,i3,i4;//integer variables
   int list[4] startVector = {i1,i2,i3,i4};
+  int i = 0;
   
-  //work from right to left
-  for(i3 == i4){
-
+  //work from left to right
+  //testing first 2 positions
+  if(i1 == i2){
+      i1 = i1*i2;
+      if(i3 != 0){
+          i2 = i3;
+      }
+      if(i4 != 0){
+          i3 = i4;
+      }
   }
   
   return 0;
