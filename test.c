@@ -46,6 +46,10 @@ int test_tilt_left()
   return e;
 }
 
+int test_tilt_right()
+int e=0;
+
+
 int main(int argc,char **argv)
 {
   int e=0;
