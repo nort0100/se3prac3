@@ -171,21 +171,21 @@ int tilt_line_right(int length,int *line)
       }
   }
     //testing 4 and 2
-  if(i2 == null){//check if null, otherwise nothing
-      if(i1 == i3){
-          i1 = i1*i3;
-          if(i4 != null){
-              i2 = i4;
+  if(i3 == null){//check if null, otherwise nothing
+      if(i4 == i2){
+          i4 = i4*i2;
+          if(i1 != null){
+              i3 = i1;
           }
       }
   }
    //testing 4 and 1
-  if(i2 == null && i3 == null){
-      if(i1 == i4){
-          i1 = i1*i4;
+  if(i3 == null && i2 == null){
+      if(i4 == i1){
+          i4 = i4*i1;
           i2 = null;
           i3 = null;
-          i4 = null;
+          i1 = null;
       }
   }
   //testing 3 and 1
