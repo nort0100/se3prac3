@@ -39,6 +39,14 @@ int tilt_line_left(int length,int *line)
           i3 = i4;
           i4 = null;
       }
+      else{
+          i3 = null;
+      }
+  }
+  //testing final 2 positions
+  if(i3 == i4){
+      i3 = i3*i4;
+      i4 = null;
   }
   
   return 0;
