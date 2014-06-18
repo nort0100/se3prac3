@@ -78,8 +78,8 @@ int tilt_line_left(int length,int *line)
       i4 = null;
   }
   
-  //move all values as far left as possible, for only 1 value present, otherwise covered in combinations
-  //checking first position
+  //move all values as far left as possible, for only any values present, otherwise covered in combinations
+  //checking first position-other values taken care of in combinations above or below
   if(i1 != null){
       i1 = i1;
   }
@@ -88,6 +88,16 @@ int tilt_line_left(int length,int *line)
       i1 = i2;
       i2 = null;
   }
+  //checking third position
+  if(i3 != null && i1 == !null){
+      if(i2 == null){
+          i2 = i3;
+      }
+      else{
+          i3 = i3;
+      }
+  }
+  //checking fourth position
   
     //Give each value a line number so it can be returned
   
