@@ -32,6 +32,19 @@ int tilt_line_left(int length,int *line)
           i3 = null;
       }
   }
+    //testing 1 and 3
+  if(i2 == null){//check if null, otherwise nothing
+      if(i1 == i3){
+          i1 = i1*i3;
+          if(i4 != null){
+              i2 = i4;
+          }
+      }
+  }
+   //testing 1 and 4
+  
+  //testing 2 and 4
+  
   //testing middle 2 positions
   if(i2 == i3){
       i2 = i2*i3;
@@ -48,6 +61,9 @@ int tilt_line_left(int length,int *line)
       i3 = i3*i4;
       i4 = null;
   }
+  
+  //move all values as far left as possible
+  
   
   return 0;
 }
