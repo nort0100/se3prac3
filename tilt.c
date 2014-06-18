@@ -109,6 +109,21 @@ int tilt_line_left(int length,int *line)
       }
   }
   //checking fourth position
+  if(i4 != null && i1 !=null){
+      if(i2 != null){
+          if(i3 == null){
+              i3 = i4;
+              i4 = null;
+          }
+          else{
+              i4 = i4;
+          }
+      }
+      if(i2 == null){
+          i2 = i4;
+          i4 = null;
+      }
+  }
   
     //Give each value a line number so it can be returned
   
