@@ -79,8 +79,17 @@ int tilt_line_left(int length,int *line)
   }
   
   //move all values as far left as possible, for only 1 value present, otherwise covered in combinations
-  //Give each value a line number so it can be returned
+  //checking first position
+  if(i1 != null){
+      i1 = i1;
+  }
+  //checking second position
+  if(i2 != null && i1 == null){
+      i1 = i2;
+      i2 = null;
+  }
   
+    //Give each value a line number so it can be returned
   
   return 0;
 }
