@@ -18,11 +18,26 @@ int tilt_line_left(int length,int *line)
   //testing first 2 positions
   if(i1 == i2){
       i1 = i1*i2;
-      if(i3 != 0){
+      if(i3 != null){
           i2 = i3;
       }
-      if(i4 != 0){
+      else{
+          i2 = null;
+      }
+      if(i4 != null){
           i3 = i4;
+          i4 = null;
+      }
+      else{
+          i3 = null;
+      }
+  }
+  //testing middle 2 positions
+  if(i2 == i3){
+      i2 = i2*i3;
+      if(i4 != null){
+          i3 = i4;
+          i4 = null;
       }
   }
   
