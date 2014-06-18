@@ -144,7 +144,7 @@ int tilt_line_right(int length,int *line)
   // make sure vector length is sensible
   if (length<1||length>255) return -1;
 
-  // slide tiles to the right
+  // slide tiles to the left
 
   // combine tiles as required
 
@@ -152,71 +152,71 @@ int tilt_line_right(int length,int *line)
   int list[4] startVector = {i1,i2,i3,i4};
   int i = 0;
   
-  //work from right to left
-  //testing first 2 positions, i3 and i4 are now first
-  if(i4 == i3){
-      i4 = i4*i3;
-      if(i2 != null){
-          i3 = i2;
+  //work from left to right
+  //testing first 2 positions
+  if(i1 == i2){
+      i1 = i1*i2;
+      if(i3 != null){
+          i2 = i3;
+      }
+      else{
+          i2 = null;
+      }
+      if(i4 != null){
+          i3 = i4;
+          i4 = null;
       }
       else{
           i3 = null;
       }
-      if(i1 != null){
-          i2 = i1;
-          i1 = null;
-      }
-      else{
-          i1 = null;
-      }
   }
-    //testing 4 and 2
-  if(i3 == null){//check if null, otherwise nothing
-      if(i4 == i2){
-          i4 = i4*i2;
-          if(i1 != null){
-              i3 = i1;
+    //testing 1 and 3
+  if(i2 == null){//check if null, otherwise nothing
+      if(i1 == i3){
+          i1 = i1*i3;
+          if(i4 != null){
+              i2 = i4;
           }
       }
   }
-   //testing 4 and 1
-  if(i3 == null && i2 == null){
-      if(i4 == i1){
-          i4 = i4*i1;
+   //testing 1 and 4
+  if(i2 == null && i3 == null){
+      if(i1 == i4){
+          i1 = i1*i4;
           i2 = null;
           i3 = null;
-          i1 = null;
+          i4 = null;
       }
   }
-  //testing 3 and 1
-  if(i4 == null && i2 == null){
-      if(i3 == i1){
-          i3 = i3*i1;
-          i4 = i3;
-          i1 = null;
+  //testing 2 and 4
+  if(i1 == null && i3 == null){
+      if(i2 == i4){
+          i2 = i2*i4;
+          i1 = i2;
           i2 = null;
           i3 = null;
+          i4 = null;
       }
   }
   
-  //testing middle 2 positions, reversed from left
-  if(i3 == i2){
-      i3 = i3*i2;
-      if(i1 != null){
-          i2 = i1;
-          i1 = null;
+  //testing middle 2 positions
+  if(i2 == i3){
+      i2 = i2*i3;
+      if(i4 != null){
+          i3 = i4;
+          i4 = null;
       }
       else{
-          i2 = null;
+          i3 = null;
       }
   }
-  //testing final 2 positions, i1 and i2
-  if(i2 == i1){
-      i2 = i2*i1;
-      i1 = null;
+  //testing final 2 positions
+  if(i3 == i4){
+      i3 = i3*i4;
+      i4 = null;
   }
   
-  //move all values as far right as possible, for only any values present, otherwise covered in combinations
+  //move all values as far left as possible, for only any values present, otherwise covered in combinations
   //checking first position-other values taken care of in combinations above or below
   //possibly some redundant code, trying to avoid by using this process, my bad
   if(i1 != null){
@@ -268,11 +268,11 @@ int tilt_line_right(int length,int *line)
       i1 = i4;                  //to be moved they would have moved previously
       i4 = null;
   }
-  //Give each value a line number so it can be returned
-  line[i] = i1;
-  line[1+1] = i2;
-  line[i+2] = i3;
-  line[i+3] = i4;
+  //Give each value a line number so it can be returned, only needed to be changed switch values around
+  line[i] = i4;
+  line[1+1] = i3;
+  line[i+2] = i2;
+  line[i+3] = i1;
   
   return 0;
 }
