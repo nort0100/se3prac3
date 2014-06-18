@@ -88,13 +88,24 @@ int tilt_line_left(int length,int *line)
       i1 = i2;
       i2 = null;
   }
+  else{
+      i2 = i2;
+  }
   //checking third position
   if(i3 != null && i1 == !null){
       if(i2 == null){
           i2 = i3;
+          i3 = null;
       }
       else{
           i3 = i3;
+      }
+  }
+  //third position cont.
+  if(i3 != null && i1 == null){
+      if (i2 == null){
+          i1 = i3;
+          i3 = null;
       }
   }
   //checking fourth position
