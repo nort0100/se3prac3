@@ -124,8 +124,12 @@ int tilt_line_left(int length,int *line)
           i4 = null;
       }
   }
-  
-    //Give each value a line number so it can be returned
+  //checking fourth position cont.
+  if(i4 != null && i1 == null){//no need to check any other values as if they needed
+      i1 = i4;                  //to be moved they would have moved previously
+      i4 = null;
+  }
+  //Give each value a line number so it can be returned
   
   return 0;
 }
