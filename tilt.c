@@ -144,7 +144,7 @@ int tilt_line_right(int length,int *line)
   // make sure vector length is sensible
   if (length<1||length>255) return -1;
 
-  // slide tiles to the left
+  // slide tiles to the right
 
   // combine tiles as required
 
@@ -152,22 +152,22 @@ int tilt_line_right(int length,int *line)
   int list[4] startVector = {i1,i2,i3,i4};
   int i = 0;
   
-  //work from left to right
-  //testing first 2 positions
-  if(i1 == i2){
-      i1 = i1*i2;
-      if(i3 != null){
-          i2 = i3;
-      }
-      else{
-          i2 = null;
-      }
-      if(i4 != null){
-          i3 = i4;
-          i4 = null;
+  //work from right to left
+  //testing first 2 positions, i3 and i4 are now first
+  if(i4 == i3){
+      i4 = i4*i3;
+      if(i2 != null){
+          i3 = i2;
       }
       else{
           i3 = null;
+      }
+      if(i1 != null){
+          i2 = i1;
+          i1 = null;
+      }
+      else{
+          i1 = null;
       }
   }
     //testing 1 and 3
