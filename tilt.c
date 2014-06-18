@@ -80,6 +80,7 @@ int tilt_line_left(int length,int *line)
   
   //move all values as far left as possible, for only any values present, otherwise covered in combinations
   //checking first position-other values taken care of in combinations above or below
+  //possibly some redundant code, trying to avoid by using this process, my bad
   if(i1 != null){
       i1 = i1;
   }
@@ -130,6 +131,10 @@ int tilt_line_left(int length,int *line)
       i4 = null;
   }
   //Give each value a line number so it can be returned
+  line[i] = i1;
+  line[1+1] = i2;
+  line[i+2] = i3;
+  line[i+3] = i4;
   
   return 0;
 }
