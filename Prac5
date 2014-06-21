@@ -1,2 +1,32 @@
 Test plan for 2048 Game
 
+Testing for the 2048 game will cover most of the code, it won't be practical to cover everything. Unit testing will be 
+conducted first, this will be whitebox. Following this integration testing will be conducted, this will be blackbox. Finally
+system tests will be conducted, this will also be black box. Destructive testing will used in conjunction with this testing
+to ensure the program is reliable, as compared to many programs there are limited outcomes for this program. Following this 
+alpha/beta testing will conducted to ensure the program works as it is supposed to.
+
+The main focus will be on the tilt.c file which contains the code to implement the board pieces to move and correctly add, 
+if applicable. To some extent the board.c and main.c will used but mainly to assist the testing of tilt.c. Having said that these
+ classes will also be tested seperately using dummy data/methods etc. to allow testing at the unit/integration levels. keyboard.c
+  will also be tested mainly at the unit level.
+  
+Specifically the test items are:
+tilt.c
+main.c
+board.c
+keyboard.c
+
+Any other files in the project may be needed for the program to run succesfully but will not be specifically tested.
+They will be used as required, dummied where applicable.
+
+The features that will be tested:
+Correct movement of pieces
+Correct addition of pieces
+Correct response from input
+Program running correctly(main.c)-Using dummy data etc.
+The overall program
+
+The features that won't be tested:
+None in particular-This plan is designed to be fairly comprehensive
+
