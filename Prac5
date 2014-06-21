@@ -30,3 +30,37 @@ The overall program
 The features that won't be tested:
 None in particular-This plan is designed to be fairly comprehensive
 
+The testing will be started with unit testing. Once complete to satisfactory standard outlined below integration testing can 
+ begin. Integration testing will then be completed, with a focus on destructive testing, to ensure the program can handle 
+ incorrect data etc. Once complete to a satisfactory standard, system testing will commence. System testing will be a combination
+ of standard(pass/fail) testing and destructive testing where applicable.
+Alpha/Beta testing will occur after the above testing has been completed. This will not be a focus,but will be needed to be 
+completed for overall comprehensive testing to have occurred.
+
+For the Unit Testing:
+Input data will be given and based on the known code, correct ouput needs to occur. Pass will occur when output data = expected
+ data values. Fail if !=. Some incorrect data will be given as part of destructive testing.
+ 
+For the Integration Testing:
+A combination of real and dummy input data will be given. As in unit testing output data will be compared to expected data values.
+If = Pass. Else a fail. Correct data will be given at first, before incorrect data introduced as part of destructive testing.
+
+For the Systems Testing:
+All methods etc. used, real data input. Pass if output data = expected data values. Fail otherwise.
+Will test as many possibilities as possible. Destructive testing will be part of this, for correctness.
+
+Alpha/Beta Testing:
+No specific pass/fail. Mainly to find errors and potential bugs in complete system.
+Destructive testing will part of this, users will likely try and force an error, find a bug.
+
+Tests will need to deliver pass/fail. As well as this cause of failure needs to be noted, particularly if failure occurs
+ not as a result of incorrect data. Check on expected data will need to be double checked.
+For program to be correct 100% of unit testing needs to pass. Will need to modifed until this holds true.
+Integration testing 90% will need to be correct, before progressing to System Testing. Will need to further develop code
+ until closer to 100% is complete and system testing recompleted.
+System testing should be close to 100% correct as possible. On first try 90% will be accepted.
+Alpha/Beta testing will need to have reports associated with any errors or bugs found. Code needs to modified, being careful
+ of possible regressions. Possibly have to re-do integration and system testing again.
+
+Overall testing will be complete when sufficient testing has been completed to allow Alpha/Beta testing to occur.
+Otherwise program will have to be modified until Alpha/Beta testing can commence.
